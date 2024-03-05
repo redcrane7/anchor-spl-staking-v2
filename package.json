@@ -1,0 +1,26 @@
+{
+    "name": "spl-staking",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "init-pool": "env ANCHOR_PROVIDER_URL=https://api.mainnet-beta.solana.com node js/init.ts",
+        "local-init-pool": "env ANCHOR_PROVIDER_URL=http://localhost:8899 node js/init.ts",
+        "dev-init-pool": "env ANCHOR_PROVIDER_URL=https://api.devnet.solana.com node js/init-dev.ts",
+        "test": "env ANCHOR_WALLET=$HOME/.config/solana/id.json env ANCHOR_PROVIDER_URL=http://127.0.0.1:8899 ts-mocha -p ./tsconfig.json -t 1000000 tests/*.ts"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@project-serum/anchor": "^0.18.2",
+        "@solana/spl-token": "^0.1.8"
+    },
+    "devDependencies": {
+        "@types/mocha": "^9.0.0",
+        "chai": "^4.3.4",
+        "mocha": "^9.0.3",
+        "ts-mocha": "^8.0.0",
+        "typescript": "^4.3.5"
+    }
+}
